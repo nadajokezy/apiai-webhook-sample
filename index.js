@@ -68,7 +68,7 @@ restService.post('/echo', function(req, res) {
                 },
                 "source": "math-by-huy"
                 };
-        return JSON.stringify(a);
+        return res.json(a);
     }
     return res.json({
         speech: speech,
