@@ -35,12 +35,13 @@ restService.post('/echo', function(req, res) {
         var degree = req.body.result.parameters.feeling.degree;
         var mood = req.body.result.parameters.feeling.mood;
         speech = 'Hệ thống phân tích bạn đang '+mood+' ở mức '+degree;
-        var a = {
+        if(mood === 'vui'){
+            var a = {
                 "speech":speech,
                 "data": {
                     "facebook": [
                         {
-                            "text": "blabla"
+                            "text": speech
                         },
                         {
                             "attachment": {
@@ -56,7 +57,7 @@ restService.post('/echo', function(req, res) {
                                                 {
                                                     "title": "More info",
                                                     "type": "web_url",
-                                                    "url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg"
+                                                    "url": "http://careerbuilder.vn/vi/talentcommunity/10-cong-viec-thu-vi-trong-he-nay.35A50EF0.html"
                                                 }
                                             ]
                                         }
@@ -69,6 +70,115 @@ restService.post('/echo', function(req, res) {
                 "source": "math-by-huy"
                 };
         return res.json(a);
+        }
+        if(mood === 'buồn'){
+            var a = {
+                "speech":speech,
+                "data": {
+                    "facebook": [
+                        {
+                            "text": speech
+                        },
+                        {
+                            "attachment": {
+                                "type": "template",
+                                "payload": {
+                                    "template_type": "generic",
+                                    "elements": [
+                                        {
+                                            "title": "Some title",
+                                            "subtitle": "Some subtitle",
+                                            "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
+                                            "buttons": [
+                                                {
+                                                    "title": "More info",
+                                                    "type": "web_url",
+                                                    "url": "http://vietnamnet.vn/vn/doi-song/41-meo-don-gian-de-song-vui-ve-192654.html"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "source": "math-by-huy"
+                };
+        return res.json(a);
+        }
+        if(mood === 'giận'){
+            var a = {
+                "speech":speech,
+                "data": {
+                    "facebook": [
+                        {
+                            "text": speech
+                        },
+                        {
+                            "attachment": {
+                                "type": "template",
+                                "payload": {
+                                    "template_type": "generic",
+                                    "elements": [
+                                        {
+                                            "title": "Some title",
+                                            "subtitle": "Some subtitle",
+                                            "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
+                                            "buttons": [
+                                                {
+                                                    "title": "More info",
+                                                    "type": "web_url",
+                                                    "url": "http://ngoisao.net/tin-tuc/choi-blog/11-chieu-dap-tan-con-nong-gian-2903885.html"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "source": "math-by-huy"
+                };
+        return res.json(a);
+        }
+        if(mood === 'chán'){
+            var a = {
+                "speech":speech,
+                "data": {
+                    "facebook": [
+                        {
+                            "text": speech
+                        },
+                        {
+                            "attachment": {
+                                "type": "template",
+                                "payload": {
+                                    "template_type": "generic",
+                                    "elements": [
+                                        {
+                                            "title": "Some title",
+                                            "subtitle": "Some subtitle",
+                                            "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
+                                            "buttons": [
+                                                {
+                                                    "title": "More info",
+                                                    "type": "web_url",
+                                                    "url": "http://news.zing.vn/10-dieu-de-lam-khi-ban-chan-nan-post856.html"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "source": "math-by-huy"
+                };
+        return res.json(a);
+        }
     }
     return res.json({
         speech: speech,
