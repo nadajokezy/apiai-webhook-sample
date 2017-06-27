@@ -36,20 +36,19 @@ restService.post('/echo', function(req, res) {
         var mood = req.body.result.parameters.feeling.mood;
         speech = 'Hệ thống phân tích bạn đang '+mood+' ở mức '+degree;
         if(mood === 'vui'){
-            data = {
-                "facebook": {
-                    "attachment": {
-                        "type": "audio",
-                        "payload": {
-                        "url": "https://upload.wikimedia.org/wikipedia/en/a/a3/Happy_%28Pharrell_Williams_song_-_sample%29.ogg"
-                        }
-                    }
-                }
-            }
             return res.json({
                 speech: speech,
                 displayText: speech,
-                data: data,
+                data: {
+                    "facebook": {
+                        "attachment": {
+                            "type": "audio",
+                            "payload": {
+                                "url": "https://upload.wikimedia.org/wikipedia/en/a/a3/Happy_%28Pharrell_Williams_song_-_sample%29.ogg"
+                            }
+                        }
+                    }
+                },
                 source: 'math-test-by-huy'
             });
         }
