@@ -35,41 +35,7 @@ restService.post('/echo', function(req, res) {
         var degree = req.body.result.parameters.feeling.degree;
         var mood = req.body.result.parameters.feeling.mood;
         speech = 'Hệ thống phân tích bạn đang '+mood+' ở mức '+degree;
-        if(mood === 'vui'){
-            return res.json({
-                speech:speech,
-                data: "{
-                    "facebook": [
-                        {
-                            "text": "blabla"
-                        },
-                        {
-                            "attachment": {
-                                "type": "template",
-                                "payload": {
-                                    "template_type": "generic",
-                                    "elements": [
-                                        {
-                                            "title": "Some title",
-                                            "subtitle": "Some subtitle",
-                                            "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
-                                            "buttons": [
-                                                {
-                                                    "title": "More info",
-                                                    "type": "web_url",
-                                                    "url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    ]
-                }",
-                source: 'math-test-by-huy'
-            });
-        }
+    }
     return res.json({
         speech: speech,
         displayText: speech,
