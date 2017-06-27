@@ -64,7 +64,16 @@ restService.post('/echo', function(req, res) {
                                     ]
                                 }
                             }
-                        }
+                        },
+                        {
+                            "attachment": {
+                              "type": "video",
+                              "payload": {
+                                "url": "https://youtu.be/y6Sxv-sUYtM"
+                              }
+                            }
+                          }
+
                     ]
                 },
                 "source": "math-by-huy"
