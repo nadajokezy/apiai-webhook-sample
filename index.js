@@ -67,9 +67,9 @@ restService.post('/echo', function(req, res) {
                         },
                         {
                             "attachment": {
-                              "type": "video",
+                              "type": "audio",
                               "payload": {
-                                "url": "https://youtu.be/y6Sxv-sUYtM"
+                                "url": "https://upload.wikimedia.org/wikipedia/en/a/a3/Happy_%28Pharrell_Williams_song_-_sample%29.ogg"
                               }
                             }
                           }
