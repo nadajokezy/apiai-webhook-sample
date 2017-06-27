@@ -15,7 +15,6 @@ restService.post('/echo', function(req, res) {
     var b = parseFloat(req.body.result.parameters.secondNum);
     if(req.body.result.action === 'searchA'){
         speech = "https://www.lamsao.com/tim-kiem.html?q=" + req.body.result.parameters.article.replace(/ /g,"%20");
-        opn(speech);
     }
     if(req.body.result.action === 'plus'){
         speech = a+b;
