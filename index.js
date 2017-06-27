@@ -38,7 +38,7 @@ restService.post('/echo', function(req, res) {
         if(mood === 'vui'){
             return res.json({
                 speech:speech,
-                "data": {
+                data: {
                     "facebook": [
                         {
                             "text": "blabla"
