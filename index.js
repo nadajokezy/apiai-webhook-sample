@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const opn = require('opn');
 const restService = express();
 
 restService.use(bodyParser.urlencoded({
