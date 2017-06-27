@@ -24,6 +24,9 @@ restService.post('/echo', function(req, res) {
     }
     if(req.body.result.action === 'divide'){
         speech = a/b;
+         if(b === 0){
+            speech = "Dở hơi vcl. Éo ai đi chia cho 0. Về học lớp 1 đi.";
+        }
     }
     return res.json({
         speech: speech,
