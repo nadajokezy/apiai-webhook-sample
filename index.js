@@ -19,14 +19,17 @@ restService.post('/hook', function (req, res) {
 
             if (requestBody.result) {
                 speech = '';
-
-                if (requestBody.result.fulfillment) {
-                    speech += requestBody.result.fulfillment.speech;
-                    speech += ' ';
+                if (requestBody.result.action === 'plus') {
+                    speech = requestBody.result.action.parameters.firstNum + requestBody.result.action.parameters.secondNum;
                 }
-
-                if (requestBody.result.action) {
-                    speech += 'action: ' + requestBody.result.action;
+                if (requestBody.result.action === 'minus') {
+                    speech = requestBody.result.action.parameters.firstNum - requestBody.result.action.parameters.secondNum;
+                }
+                if (requestBody.result.action === 'multiply') {
+                    speech = requestBody.result.action.parameters.firstNum * requestBody.result.action.parameters.secondNum;
+                }
+                if (requestBody.result.action === 'divide') {
+                    speech = requestBody.result.action.parameters.firstNum / requestBody.result.action.parameters.secondNum;
                 }
             }
         }
@@ -36,7 +39,7 @@ restService.post('/hook', function (req, res) {
         return res.json({
             speech: speech,
             displayText: speech,
-            source: 'apiai-webhook-sample'
+            source: 'math_api_by_huy'
         });
     } catch (err) {
         console.error("Can't process request", err);
