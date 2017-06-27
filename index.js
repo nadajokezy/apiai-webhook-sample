@@ -46,6 +46,12 @@ restService.post('/echo', function(req, res) {
                     }
                 }
             }
+            return res.json({
+                speech: speech,
+                displayText: speech,
+                data: data,
+                source: 'math-test-by-huy'
+            });
         }
     }
     return res.json({
