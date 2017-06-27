@@ -14,16 +14,16 @@ restService.post('/echo', function(req, res) {
     var a = parseFloat(req.body.result.parameters.firstNum);
     var b = parseFloat(req.body.result.parameters.secondNum);
     if(req.body.result.action === 'plus'){
-        a+b;
+        speech = a+b;
     }
     if(req.body.result.action === 'minus'){
-        a-b;
+        speech = a-b;
     }
     if(req.body.result.action === 'multiply'){
-        a*b;
+        speech = a*b;
     }
     if(req.body.result.action === 'divide'){
-        a/b;
+        speech = a/b;
     }
     return res.json({
         speech: speech,
