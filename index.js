@@ -35,7 +35,7 @@ restService.post('/echo', function(req, res) {
         var degree = req.body.result.parameters.feeling.degree;
         var mood = req.body.result.parameters.feeling.mood;
         speech = 'Hệ thống phân tích bạn đang '+mood+' ở mức '+degree;
-        return '{
+        return {
 "speech":speech,
 "data": {
     "facebook": [
@@ -67,7 +67,7 @@ restService.post('/echo', function(req, res) {
     ]
 }
 "source":"math-by-huy"
-}';
+};
     }
     return res.json({
         speech: speech,
