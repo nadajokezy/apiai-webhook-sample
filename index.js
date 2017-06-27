@@ -50,12 +50,12 @@ restService.post('/echo', function(req, res) {
                                     "template_type": "generic",
                                     "elements": [
                                         {
-                                            "title": "Some title",
-                                            "subtitle": "Some subtitle",
+                                            "title": "Hãy vui tiếp đê",
+                                            "subtitle": "Đọc thêm những công việc thú vị nhé",
                                             "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
                                             "buttons": [
                                                 {
-                                                    "title": "More info",
+                                                    "title": "OK xem luôn",
                                                     "type": "web_url",
                                                     "url": "http://careerbuilder.vn/vi/talentcommunity/10-cong-viec-thu-vi-trong-he-nay.35A50EF0.html"
                                                 }
@@ -86,12 +86,12 @@ restService.post('/echo', function(req, res) {
                                     "template_type": "generic",
                                     "elements": [
                                         {
-                                            "title": "Some title",
-                                            "subtitle": "Some subtitle",
+                                            "title": "Đừng buồn nữa",
+                                            "subtitle": "Một số cách để vui lên này",
                                             "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
                                             "buttons": [
                                                 {
-                                                    "title": "More info",
+                                                    "title": "Xem tiếp",
                                                     "type": "web_url",
                                                     "url": "http://vietnamnet.vn/vn/doi-song/41-meo-don-gian-de-song-vui-ve-192654.html"
                                                 }
@@ -122,12 +122,12 @@ restService.post('/echo', function(req, res) {
                                     "template_type": "generic",
                                     "elements": [
                                         {
-                                            "title": "Some title",
-                                            "subtitle": "Some subtitle",
+                                            "title": "Bực làm gì xõa đi",
+                                            "subtitle": "Những cách nguôi giận này",
                                             "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
                                             "buttons": [
                                                 {
-                                                    "title": "More info",
+                                                    "title": "Vào xem",
                                                     "type": "web_url",
                                                     "url": "http://ngoisao.net/tin-tuc/choi-blog/11-chieu-dap-tan-con-nong-gian-2903885.html"
                                                 }
@@ -158,12 +158,12 @@ restService.post('/echo', function(req, res) {
                                     "template_type": "generic",
                                     "elements": [
                                         {
-                                            "title": "Some title",
-                                            "subtitle": "Some subtitle",
+                                            "title": "Chán quá thì làm gì vui đê",
+                                            "subtitle": "Một số việc làm khi chán này",
                                             "image_url": "https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
                                             "buttons": [
                                                 {
-                                                    "title": "More info",
+                                                    "title": "Ờ xem đi",
                                                     "type": "web_url",
                                                     "url": "http://news.zing.vn/10-dieu-de-lam-khi-ban-chan-nan-post856.html"
                                                 }
